@@ -23,12 +23,12 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-purple-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md border border-gray-100">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-2xl mb-4">
-            <Package className="h-8 w-8 text-indigo-600" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl mb-4">
+            <Package className="h-8 w-8 text-green-500" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Xush kelibsiz!</h1>
           <p className="text-gray-500 mt-1">Hisobingizga kiring</p>
@@ -97,7 +97,7 @@ export default function Login() {
 
         <p className="text-center text-sm text-gray-500 mt-6">
           Hisobingiz yo'qmi?{' '}
-          <Link to="/register" className="text-indigo-600 font-medium hover:underline">
+          <Link to="/register" className="text-green-500 font-medium hover:underline">
             Ro'yxatdan o'ting
           </Link>
         </p>

@@ -34,7 +34,7 @@ export default function ProductCard({ product }) {
               </span>
             </div>
           )}
-          <span className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-indigo-600 text-xs font-medium px-2 py-1 rounded-full">
+          <span className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-green-500 text-xs font-medium px-2 py-1 rounded-full">
             {product.category}
           </span>
         </div>
@@ -46,7 +46,7 @@ export default function ProductCard({ product }) {
 
           <div className="mt-3 flex items-center justify-between">
             <div>
-              <span className="text-lg font-bold text-indigo-600">
+              <span className="text-lg font-bold text-green-500">
                 {product.price.toLocaleString()}
               </span>
               <span className="text-xs text-gray-400 ml-1">so'm</span>
@@ -55,7 +55,7 @@ export default function ProductCard({ product }) {
             <button
               onClick={handleAdd}
               disabled={outOfStock}
-              className="bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 active:bg-indigo-800 transition disabled:opacity-40 disabled:cursor-not-allowed"
+              className="bg-green-500 text-white p-2 rounded-lg hover:bg-green-500 active:bg-green-500 transition disabled:opacity-40 disabled:cursor-not-allowed"
               aria-label="Savatga qo'shish"
             >
               <ShoppingCart className="h-4 w-4" />

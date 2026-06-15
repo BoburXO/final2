@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { ShoppingCart, User, LogOut, LayoutDashboard, Package, Menu, X } from 'lucide-react';
+import { ShoppingCart, User, LogOut, LayoutDashboard, Menu, X, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
 import { useAuthStore } from '../store/authStore';
 import { useCartStore } from '../store/cartStore';
@@ -19,8 +19,8 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { to: '/', label: 'Bosh sahifa' },
-    { to: '/products', label: 'Mahsulotlar' },
+    { to: '/', label: 'Asosiy sahifa' },
+    { to: '/products', label: 'Mahsulotlar katalogi' },
   ];
 
   const isActive = (path) =>
@@ -31,9 +31,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 text-indigo-600 font-bold text-xl">
-            <Package className="h-7 w-7" />
-            <span>ShopBot</span>
+         <span className='flex items-center gap-10'>
+           <Link to="/" className="flex items-center gap-2 text-green-500 font-bold text-xl">
+            <ShoppingBag className="h-7 w-7" />
+            <span>BoburShopBot</span>
           </Link>
 
           {/* Desktop nav links */}
@@ -43,7 +44,7 @@ export default function Navbar() {
                 key={to}
                 to={to}
                 className={`text-sm font-medium transition-colors ${
-                  isActive(to) ? 'text-indigo-600' : 'text-gray-600 hover:text-indigo-600'
+                  isActive(to) ? 'text-green-500' : 'text-gray-600 hover:text-green-500'
                 }`}
               >
                 {label}
@@ -51,10 +52,11 @@ export default function Navbar() {
             ))}
           </div>
 
+         </span>
           {/* Right side */}
           <div className="flex items-center gap-3">
             {/* Cart */}
-            <Link to="/cart" className="relative p-2 text-gray-600 hover:text-indigo-600 transition">
+            <Link to="/cart" className="relative p-2 text-gray-600 hover:text-green-500 transition">
               <ShoppingCart className="h-6 w-6" />
               {cartCount > 0 && (
                 <span className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-1">
@@ -68,7 +70,7 @@ export default function Navbar() {
                 {user.role === 'admin' && (
                   <Link
                     to="/admin"
-                    className="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg transition"
+                    className="p-2 text-green-500 hover:bg-green-50 rounded-lg transition"
                     title="Admin panel"
                   >
                     <LayoutDashboard className="h-5 w-5" />
@@ -91,7 +93,7 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="hidden md:flex items-center gap-2">
-                <Link to="/login" className="text-sm text-gray-600 hover:text-indigo-600 transition px-2">
+                <Link to="/login" className="text-sm text-gray-600 hover:text-green-500 transition px-2">
                   Kirish
                 </Link>
                 <Link
@@ -106,7 +108,7 @@ export default function Navbar() {
             {/* Mobile menu toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 text-gray-600 hover:text-indigo-600 transition"
+              className="md:hidden p-2 text-gray-600 hover:text-green-500 transition"
             >
               {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -122,7 +124,7 @@ export default function Navbar() {
                 to={to}
                 onClick={() => setMobileOpen(false)}
                 className={`block px-4 py-2 rounded-lg text-sm font-medium ${
-                  isActive(to) ? 'bg-indigo-50 text-indigo-600' : 'text-gray-600 hover:bg-gray-50'
+                  isActive(to) ? 'bg-green-50 text-green-500' : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
                 {label}
@@ -131,8 +133,8 @@ export default function Navbar() {
             {user ? (
               <>
                 {user.role === 'admin' && (
-                  <Link to="/admin" onClick={() => setMobileOpen(false)} className="block px-4 py-2 text-sm text-indigo-600">
-                    🔧 Admin panel
+                  <Link to="/admin" onClick={() => setMobileOpen(false)} className="block px-4 py-2 text-sm text-green-500">
+                    🔧 Admin Dashboard
                   </Link>
                 )}
                 <Link to="/profile" onClick={() => setMobileOpen(false)} className="block px-4 py-2 text-sm text-gray-600">
@@ -145,7 +147,7 @@ export default function Navbar() {
             ) : (
               <>
                 <Link to="/login" onClick={() => setMobileOpen(false)} className="block px-4 py-2 text-sm text-gray-600">Kirish</Link>
-                <Link to="/register" onClick={() => setMobileOpen(false)} className="block px-4 py-2 text-sm text-indigo-600 font-medium">Ro'yxatdan o'tish</Link>
+                <Link to="/register" onClick={() => setMobileOpen(false)} className="block px-4 py-2 text-sm text-green-500 font-medium">Ro'yxatdan o'tish</Link>
               </>
             )}
           </div>

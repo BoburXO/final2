@@ -58,7 +58,7 @@ export default function Dashboard() {
             <div className="text-2xl font-bold text-gray-900">{value}</div>
             <div className="text-sm text-gray-500 mt-0.5">{label}</div>
             {link && (
-              <Link to={link} className="mt-2 text-xs text-indigo-500 hover:text-indigo-700 flex items-center gap-1">
+              <Link to={link} className="mt-2 text-xs text-green-500 hover:text-green-700 flex items-center gap-1">
                 Ko'rish <ArrowRight className="h-3 w-3" />
               </Link>
             )}
@@ -70,7 +70,7 @@ export default function Dashboard() {
       <div className="card overflow-hidden">
         <div className="p-5 flex justify-between items-center border-b border-gray-100">
           <h2 className="font-bold text-gray-800">So'nggi buyurtmalar</h2>
-          <Link to="/admin/orders" className="text-indigo-600 text-sm hover:underline flex items-center gap-1">
+          <Link to="/admin/orders" className="text-green-500 text-sm hover:underline flex items-center gap-1">
             Barchasi <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -93,7 +93,7 @@ export default function Dashboard() {
                     <p className="font-medium text-gray-800">{order.user?.name || 'N/A'}</p>
                     <p className="text-gray-400 text-xs">{order.user?.email}</p>
                   </td>
-                  <td className="px-5 py-3 font-semibold text-indigo-600">
+                  <td className="px-5 py-3 font-semibold text-green-500">
                     {order.totalAmount?.toLocaleString()} so'm
                   </td>
                   <td className="px-5 py-3">

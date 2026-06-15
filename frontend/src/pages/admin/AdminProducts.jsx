@@ -110,7 +110,7 @@ export default function AdminProducts() {
                       </div>
                     </div>
                   </td>
-                  <td className="px-5 py-3 font-semibold text-indigo-600">
+                  <td className="px-5 py-3 font-semibold text-green-500">
                     {p.price.toLocaleString()} so'm
                   </td>
                   <td className="px-5 py-3">

@@ -24,26 +24,26 @@ export default function Home() {
   return (
     <div>
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative bg-gradient-to-br from-indigo-700 via-indigo-600 to-purple-700 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
+      <section className="relative bg-gradient-to-br from-green-700 via-green-600 to-purple-700 text-white overflow-hidden">
+        {/* <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}
-        />
+        /> */}
         <div className="relative max-w-7xl mx-auto px-4 py-24 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm mb-6">
+          {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm mb-6">
             <Star className="h-4 w-4 fill-yellow-300 text-yellow-300" />
             <span>O'zbekistonning #1 online do'koni</span>
-          </div>
+          </div> */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            🛍️ ShopBot<br />
-            <span className="text-indigo-200">Online Do'kon</span>
+            🥑 BoburShopBot<br />
+            <span className="text-green-200">Online Do'kon</span>
           </h1>
-          <p className="text-lg md:text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-green-100 mb-8 max-w-2xl mx-auto">
             Qulay narxlarda sifatli mahsulotlar. Web sayt yoki Telegram bot orqali buyurtma bering!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/products"
-              className="bg-white text-indigo-700 font-semibold px-8 py-3 rounded-xl hover:bg-indigo-50 transition flex items-center gap-2 shadow-lg"
+              className="bg-white text-green-700 font-semibold px-8 py-3 rounded-xl hover:bg-green-50 transition flex items-center gap-2 shadow-lg"
             >
               Xarid qilish <ArrowRight className="h-5 w-5" />
             </Link>
@@ -84,7 +84,7 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-gray-900">🔥 Mashhur mahsulotlar</h2>
               <p className="text-gray-500 mt-1 text-sm">Eng ko'p sotib olinayotganlar</p>
             </div>
-            <Link to="/products" className="text-indigo-600 hover:text-indigo-800 text-sm font-medium flex items-center gap-1">
+            <Link to="/products" className="text-green-500 hover:text-green-800 text-sm font-medium flex items-center gap-1">
               Barchasi <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

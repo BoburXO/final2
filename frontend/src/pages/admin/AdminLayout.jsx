@@ -23,18 +23,18 @@ export default function AdminLayout() {
       <aside className="w-64 bg-white border-r border-gray-200 flex flex-col flex-shrink-0">
         {/* Logo */}
         <div className="h-16 flex items-center px-6 border-b border-gray-100">
-          <span className="font-bold text-lg text-indigo-600">🔧 Admin Panel</span>
+          <span className="font-bold text-lg text-green-500">🔧 Admin Panel</span>
         </div>
 
         {/* User info */}
         <div className="px-4 py-4 border-b border-gray-100">
-          <div className="flex items-center gap-3 bg-indigo-50 px-3 py-2 rounded-xl">
-            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">
+          <div className="flex items-center gap-3 bg-green-50 px-3 py-2 rounded-xl">
+            <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center text-white text-sm font-bold">
               {user?.name?.[0]?.toUpperCase()}
             </div>
             <div className="min-w-0">
               <p className="text-sm font-medium text-gray-800 truncate">{user?.name}</p>
-              <p className="text-xs text-indigo-500">👑 Admin</p>
+              <p className="text-xs text-green-500">👑 Admin</p>
             </div>
           </div>
         </div>
@@ -47,8 +47,8 @@ export default function AdminLayout() {
               to={to}
               className={`flex items-center gap-3 px-4 py-3 rounded-xl transition text-sm font-medium ${
                 isActive(to, exact)
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'text-gray-600 hover:bg-indigo-50 hover:text-indigo-700'
+                  ? 'bg-green-500 text-white shadow-sm'
+                  : 'text-gray-600 hover:bg-green-50 hover:text-green-700'
               }`}
             >
               <Icon className="h-5 w-5" />

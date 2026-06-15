@@ -67,7 +67,7 @@ export default function Products() {
         <button
           onClick={() => handleCategory('')}
           className={`px-4 py-1.5 rounded-full text-sm font-medium transition ${
-            !category ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-indigo-100'
+            !category ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-green-100'
           }`}
         >
           Barchasi
@@ -78,8 +78,8 @@ export default function Products() {
             onClick={() => handleCategory(cat)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition ${
               category === cat
-                ? 'bg-indigo-600 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-indigo-100'
+                ? 'bg-green-500 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-green-100'
             }`}
           >
             {cat}
@@ -98,7 +98,7 @@ export default function Products() {
           <p className="text-gray-500 text-lg">Mahsulot topilmadi</p>
           <button
             onClick={() => { setSearch(''); setCategory(''); setPage(1); load(1, '', ''); }}
-            className="mt-3 text-indigo-600 hover:underline text-sm"
+            className="mt-3 text-green-500 hover:underline text-sm"
           >
             Filtrlarni tozalash
           </button>
@@ -127,8 +127,8 @@ export default function Products() {
               onClick={() => setPage(i + 1)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
                 page === i + 1
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-indigo-100'
+                  ? 'bg-green-500 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-green-100'
               }`}
             >
               {i + 1}

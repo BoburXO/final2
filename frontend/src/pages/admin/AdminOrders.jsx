@@ -78,7 +78,7 @@ export default function AdminOrders() {
                   <p className="text-sm text-gray-400">{order.user?.email}</p>
                 </div>
                 <div className="text-right">
-                  <p className="font-bold text-indigo-600 text-lg">{order.totalAmount?.toLocaleString()} so'm</p>
+                  <p className="font-bold text-green-500 text-lg">{order.totalAmount?.toLocaleString()} so'm</p>
                   <p className="text-xs text-gray-400">
                     {new Date(order.createdAt).toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </p>
@@ -112,7 +112,7 @@ export default function AdminOrders() {
                   <select
                     value={order.status}
                     onChange={(e) => changeStatus(order._id, e.target.value)}
-                    className="border border-gray-200 rounded-lg px-2 py-1 text-xs focus:ring-2 focus:ring-indigo-300 focus:border-transparent"
+                    className="border border-gray-200 rounded-lg px-2 py-1 text-xs focus:ring-2 focus:ring-green-300 focus:border-transparent"
                   >
                     {STATUSES.map((s) => (
                       <option key={s} value={s}>{STATUS[s].label}</option>

@@ -78,7 +78,7 @@ export default function Cart() {
               />
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-gray-800 truncate">{item.name}</h3>
-                <p className="text-indigo-600 font-bold">{item.price.toLocaleString()} so'm</p>
+                <p className="text-green-500 font-bold">{item.price.toLocaleString()} so'm</p>
               </div>
 
               {/* Quantity */}
@@ -183,7 +183,7 @@ export default function Cart() {
               </div>
               <div className="border-t pt-2 flex justify-between font-bold text-lg">
                 <span>Jami</span>
-                <span className="text-indigo-600">{total.toLocaleString()} so'm</span>
+                <span className="text-green-500">{total.toLocaleString()} so'm</span>
               </div>
             </div>
 

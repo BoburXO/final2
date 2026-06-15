@@ -85,11 +85,11 @@ export default function AdminUsers() {
                   <td className="px-5 py-3">
                     <div className="flex items-center gap-3">
                       <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                        u.role === 'admin' ? 'bg-yellow-100' : 'bg-indigo-100'
+                        u.role === 'admin' ? 'bg-yellow-100' : 'bg-green-100'
                       }`}>
                         {u.role === 'admin'
                           ? <Crown className="h-4 w-4 text-yellow-600" />
-                          : <User className="h-4 w-4 text-indigo-600" />}
+                          : <User className="h-4 w-4 text-green-500" />}
                       </div>
                       <span className="font-medium text-gray-800">{u.name}</span>
                     </div>

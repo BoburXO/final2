@@ -46,21 +46,21 @@ export default function Profile() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Header card */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 text-white mb-6">
+      <div className="bg-gradient-to-r from-green-600 to-purple-600 rounded-2xl p-6 text-white mb-6">
         <div className="flex items-center gap-4">
           <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl">
             {user?.role === 'admin' ? '👑' : '👤'}
           </div>
           <div>
             <h2 className="text-2xl font-bold">{user?.name}</h2>
-            <p className="text-indigo-200 text-sm">{user?.email}</p>
+            <p className="text-green-200 text-sm">{user?.email}</p>
             <span className="inline-block mt-1 bg-white/20 px-3 py-0.5 rounded-full text-xs">
               {user?.role === 'admin' ? 'Admin' : 'Foydalanuvchi'}
             </span>
           </div>
           <div className="ml-auto text-right">
             <div className="text-2xl font-bold">{orders.length}</div>
-            <div className="text-indigo-200 text-xs">Buyurtma</div>
+            <div className="text-green-200 text-xs">Buyurtma</div>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ export default function Profile() {
             key={id}
             onClick={() => setTab(id)}
             className={`flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm transition ${
-              tab === id ? 'bg-indigo-600 text-white' : 'bg-white text-gray-600 hover:bg-indigo-50 border border-gray-200'
+              tab === id ? 'bg-green-500 text-white' : 'bg-white text-gray-600 hover:bg-green-50 border border-gray-200'
             }`}
           >
             <Icon className="h-4 w-4" />
@@ -127,7 +127,7 @@ export default function Profile() {
 
                   <div className="border-t pt-2 flex justify-between font-semibold">
                     <span className="text-gray-600">Jami</span>
-                    <span className="text-indigo-600">{order.totalAmount.toLocaleString()} so'm</span>
+                    <span className="text-green-500">{order.totalAmount.toLocaleString()} so'm</span>
                   </div>
                 </div>
               ))}
